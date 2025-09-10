@@ -6,9 +6,6 @@ on:
   release:
     types: [created]
 
-permissions:
-  packages: write
-
 jobs:
   build:
     strategy:
@@ -91,7 +88,7 @@ jobs:
         working-directory: ${{ runner.temp }}/digests
         run: |
           docker buildx imagetools create -t ghcr.io/${{ github.repository }}:latest \
-            $(printf '${{ github.repository }}@sha256:%s ' *)
+            $(printf 'ghcr.io/${{ github.repository }}@sha256:%s ' *)
             
           docker buildx imagetools create -t ghcr.io/${{ github.repository }}:${{ github.ref_name }} \
-            $(printf '${{ github.repository }}@sha256:%s ' *)
+            $(printf 'ghcr.io/${{ github.repository }}@sha256:%s ' *)
