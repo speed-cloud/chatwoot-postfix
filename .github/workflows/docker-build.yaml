@@ -65,13 +65,13 @@ jobs:
 
   merge:
     runs-on: ubuntu-latest
-    needs: [build]
+    needs: build
     steps:
       - name: Download digests
         uses: actions/download-artifact@v4
         with:
           path: ${{ runner.temp }}/digests
-          name: digests-*
+          pattern: digests-*
           merge-multiple: true
       
       - name: Log in to GitHub Container Registry
