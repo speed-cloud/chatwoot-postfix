@@ -6,6 +6,9 @@ on:
   release:
     types: [created]
 
+permissions:
+  packages: write
+
 jobs:
   build:
     strategy:
