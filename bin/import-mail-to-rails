@@ -1,0 +1,6 @@
+#!/bin/sh
+curl -sS -u "actionmailbox:$RAILS_INBOUND_EMAIL_PASSWORD" \
+  -A "Action Mailbox cURL relayer (speed-cloud/chatwoot-postfix)" \
+  -H "Content-Type: message/rfc822" \
+  --data-binary @-
+  "http://$RAILS_HOST:3000/rails/action_mailbox/relay/inbound_emails"
