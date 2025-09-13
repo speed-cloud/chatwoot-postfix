@@ -30,7 +30,7 @@ fi
 info "Setting up import-mail-to-rails requirements."
 
 chmod +x /usr/local/bin/import-mail-to-rails
-useradd -m rails
+adduser -D rails
 
 cat > /etc/postfix/import-mail-to-rails.cf <<EOF
 RAILS_HOST="${RAILS_HOST}"
