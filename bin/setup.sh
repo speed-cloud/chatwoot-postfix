@@ -37,7 +37,8 @@ RAILS_HOST="${RAILS_HOST}"
 RAILS_INBOUND_EMAIL_PASSWORD="${RAILS_INBOUND_EMAIL_PASSWORD}"
 EOF
 
-install -m 400 -o rails -g rails /etc/postfix/import-mail-to-rails.cf /etc/postfix/import-mail-to-rails.cf
+chmod 400 /etc/postfix/import-mail-to-rails.cf
+chown rails:rails /etc/postfix/import-mail-to-rails.cf
 
 # --------------------------------------------------
 
