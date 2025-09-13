@@ -1,4 +1,6 @@
 #!/bin/sh
+. /etc/postfix/import-mail-to-rails.cf
+
 curl -sS -u "actionmailbox:$RAILS_INBOUND_EMAIL_PASSWORD" \
   -A "Action Mailbox cURL relayer (speed-cloud/chatwoot-postfix)" \
   -H "Content-Type: message/rfc822" \
