@@ -1,5 +1,5 @@
 #!/bin/sh
-set -euo pipefail
+set -eo pipefail
 
 LIGHTBLUE="$(printf '\033[38;5;147m')"
 RED="$(printf '\033[91m')"
