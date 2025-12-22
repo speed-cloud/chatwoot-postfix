@@ -1,4 +1,4 @@
-FROM boky/postfix:4.4.0-alpine
+FROM boky/postfix:5.0.1-alpine
 
 LABEL maintainer="Groupe Speed Cloud <contact@groupe-speed.cloud>"
 LABEL org.opencontainers.image.source="https://github.com/speed-cloud/chatwoot-postfix"
